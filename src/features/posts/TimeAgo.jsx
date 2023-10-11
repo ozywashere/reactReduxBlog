@@ -8,7 +8,7 @@ export const TimeAgo = ({timeStamp}) => {
   }
   
   return (
-    <span title={timeStamp} className="text-sm">
+    <span title={timeStamp} className="text-sm text-end">
       &nbsp; <i>{timeAgo}</i>
     </span>
   )

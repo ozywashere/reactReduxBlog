@@ -1,6 +1,7 @@
 import { PostAuthor } from "./PostAuthor.jsx";
 import { TimeAgo } from "./TimeAgo.jsx";
 import { ReactionButtons } from "./ReactionButtons.jsx";
+import { Link } from "react-router-dom";
 export const PostExcerpt = ({post}) => {
   return (
     <>
@@ -10,9 +11,9 @@ export const PostExcerpt = ({post}) => {
           { post.body.substring ( 0 , 100 ) }
         </p>
         <div className="flex justify-between items-center mt-auto">
+          <Link to={`/posts/${post.id}`} className="underline underline-offset-4">View Post</Link>
           <PostAuthor userId={ post.userId }/>
           <TimeAgo timeStamp={ post.date }/>
-        
         </div>
         <ReactionButtons post={post}/>
       </article>
